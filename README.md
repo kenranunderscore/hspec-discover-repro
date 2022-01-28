@@ -16,6 +16,8 @@ be executed when inside our `nix-shell`. The scenario is as follows:
 - `nix-shell -p cabal-install ghc --run "cabal test"` works, though,
   if `cabal-install` is allowed to use Hackage (for instance by doing
   a `cabal update` beforehand).
+- `nix-shell altShell.nix --run "cabal test"` uses `myPackage.env`,
+  but doesn't work either.
 
 ## What to do?
 
@@ -23,7 +25,6 @@ be executed when inside our `nix-shell`. The scenario is as follows:
   found when inside the `shellFor`-generated shell. That is, try to
   understand/follow the path resolution that happens when using
   `build-tool-depends`.
-- Check whether it works when not using `shellFor`.
 - ?
 
 I don't know of any passable workaround yet.
