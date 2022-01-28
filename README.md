@@ -27,3 +27,12 @@ be executed when inside our `nix-shell`. The scenario is as follows:
 - ?
 
 I don't know of any passable workaround yet.
+
+## Links
+
+There seem to be some related issues, albeit with the
+[haskell.nix](https://github.com/input-output-hk/haskell.nix)
+infrastructure which I haven't used yet.
+
+- https://github.com/input-output-hk/haskell.nix/issues/398
+- https://github.com/input-output-hk/haskell.nix/issues/231
