@@ -1,0 +1,23 @@
+cabal-version:      3.0
+name:               hspec-discover-repro
+version:            0.1.0.0
+license:            NONE
+author:             Johannes Maier
+maintainer:         johannes.maier@active-group.de
+category:           Testing
+
+library
+    exposed-modules:
+    build-depends:    base
+    hs-source-dirs:   src-lib
+    default-language: Haskell2010
+
+test-suite hspec-discover-repro-test
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    other-modules:    SomeModuleSpec
+    main-is:          Spec.hs
+    build-depends:    base
+                    , hspec
+    build-tool-depends: hspec-discover:hspec-discover
